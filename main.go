@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	runOrQuit("docker", "pull", "busybox")
 	runOrQuit("docker", "run", "busybox", "echo", "Dockerception!")
 	runOrQuit("docker", "ps", "-a")
 }
