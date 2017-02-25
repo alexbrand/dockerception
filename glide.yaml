@@ -1,0 +1,6 @@
+package: github.com/alexbrand/dockerception
+import:
+- package: github.com/docker/engine-api
+  subpackages:
+  - client
+  - types
