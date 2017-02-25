@@ -16,7 +16,7 @@ func main() {
 	cli, err := client.NewEnvClient()
 	quitOnErr(err)
 
-	// Let's see if we can even talk to it
+	// Let's see if we can even talk to Docker daemon
 	ver, err := cli.ServerVersion(context.Background())
 	quitOnErr(err)
 	fmt.Println("Was able to connect to docker daemon")
@@ -30,6 +30,8 @@ func main() {
 	}
 	resp, err := cli.ContainerCreate(context.Background(), containerConf, nil, nil, "")
 	quitOnErr(err)
+
+	// Let's start the container
 	err = cli.ContainerStart(context.Background(), resp.ID, types.ContainerStartOptions{})
 	quitOnErr(err)
 	fmt.Println("Was able to run a container")
