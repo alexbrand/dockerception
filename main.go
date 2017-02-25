@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"runtime"
 )
 
 // Echo this from within the a container
@@ -19,6 +20,7 @@ ______               _                                    _    _
 `
 
 func main() {
+	fmt.Printf("\nMax procs = %d\n\n", runtime.GOMAXPROCS(-1))
 	runOrQuit("docker", "version")
 	runOrQuit("docker", "pull", "busybox")
 	runOrQuit("docker", "run", "busybox", "echo", dc)
