@@ -7,7 +7,12 @@ import (
 )
 
 func main() {
-	cmd := exec.Command("docker", "run", "busybox", "echo", "Dockerception!")
+	runOrQuit("docker", "run", "busybox", "echo", "Dockerception!")
+	runOrQuit("docker", "ps", "-a")
+}
+
+func runOrQuit(command string, args ...string) {
+	cmd := exec.Command(command, args...)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err := cmd.Run()
