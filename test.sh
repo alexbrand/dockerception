@@ -1,5 +1,7 @@
 #!/bin/bash
 
+docker pull busybox
+
 docker build -t dockerception .
 
 docker run \
