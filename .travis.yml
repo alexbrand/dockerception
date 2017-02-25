@@ -5,4 +5,4 @@ services:
 
 script:
 - ./test.sh
-- ./test2.sh
+- ./nested-docker/test.sh
