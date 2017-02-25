@@ -5,3 +5,4 @@ services:
 
 script:
 - ./test.sh
+- ./test2.sh
