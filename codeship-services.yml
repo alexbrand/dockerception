@@ -1,6 +1,5 @@
 build:
   build:
-    image: dockerception
-    dockerfile: Dockerfile
+    image: docker:stable-dind
     add_docker: true
 
