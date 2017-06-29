@@ -2,4 +2,5 @@ build:
   build:
     image: dockerception
     dockerfile: Dockerfile
+    add_docker: true
 
