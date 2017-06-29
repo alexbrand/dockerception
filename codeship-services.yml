@@ -1,5 +1,4 @@
 build:
-  build:
-    image: docker:stable-dind
-    add_docker: true
+  image: docker:stable-dind
+  add_docker: true
 
