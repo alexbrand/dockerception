@@ -10,7 +10,7 @@ jobs:
       - run: pwd
       - run: ./test.sh
       - run: echo "$CIRCLE_TAG"
-      - run: env | grep CIRCLE
+      - run: env | grep CIRCLE | grep -v "TOKEN"
 
 deployment:
   fake_deploy_for_cci2:
