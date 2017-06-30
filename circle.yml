@@ -9,6 +9,8 @@ jobs:
       - setup_remote_docker
       - run: pwd
       - run: ./test.sh
+      - run: echo "$CIRCLE_TAG"
+      - run: env | grep CIRCLE
 
 deployment:
   fake_deploy_for_cci2:
