@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /go/src/github.com/alexbrand/dockerception
     docker:
-      - image: docker:stable-dind
+      - image: circleci/golang:1.8
     steps:
       - checkout
       - run: echo "$CIRCLE_TAG"
